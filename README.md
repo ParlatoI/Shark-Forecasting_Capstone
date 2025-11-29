@@ -8,13 +8,12 @@ _________
 
 ### Background
 
-I surf in Massachusetts, typically on the North Shore, so I would personally be interested in having an idea of if there’s a higher chance of more shark presence at certain beach breaks. I have yet to try surfing down in the Cape just because of the known large shark populations that frequent there. I also believe that a project like this could be helpful to a wide variety of people like shark researchers, other surfers, and even those in charge of maintaining beach safety, like lifeguards and Cape Code tourism boards.
+As surfers and other people interested in using the ocean for recreation, we always need to be mindful of safety levels from a variety of factors. Whereas factors like high swell and rip currents are monitored and even predicted days out, sharks are a very present factor that can impact safety but are still lacking in monitoring. There are existing apps that track tagged sharks but I have yet to see anything that seeks to further that knowledge in a more predicative way to use past history and common factors to forecast days where there is likely to be a higher chance of sharks near the beaches. 
 
-There are live shark trackers that exist already and there are also wave forecasting applications that are used for prospective ocean and wave conditions for water recreation, especially surfing. So this project seeks to add another factor when looking at ocean recreational conditions and as such, I believe that this is a novel question as I haven’t seen any other projects yet that seek to do this.
 
 ### Research Question
 
-What facors determine shark movement and can we use them to predict likelihood of shark presence along the coastline?
+What factors determine Tiger Shark (Galeocerdo cuvier) movement and can we use them to predict likelihood of shark presence along the coastline? 
 
 ### Primary Stakeholders
 
@@ -46,13 +45,19 @@ Shark presence as is detected by the receivers so taking into account both timin
 
 ### Predictor Variables
 
-Final predictor variables to be determined
+- Dataset utilized from Regularized satellite tracks from: Ocean warming alters the distributional range, migratory timing, and spatial protections of an apex predator, the tiger shark (Galeocerdo cuvier) - https://pubmed.ncbi.nlm.nih.gov/35023247/
+
+- Buoy 41009 from National Buoy Data Center: historical standard meteorological data was pulled by year from 2010 to 2019 - https://noaa-mirror.org/www.ndbc.noaa.gov/station_page.php@station=41009
+
+- Buoy 41010 from National Buoy Data Center: historical standard meteorological data was pulled by year from 2010 to 2019 - https://www.ndbc.noaa.gov/adcp_data.php?station=41010
 
 ### Analysis Plan
 
-- [ ] Data Wrangling & Preprocessing
+- [X] Data Wrangling & Preprocessing
 
-- [ ] Exploratory Data Analysis (EDA)
+- [X] Exploratory Data Analysis (EDA)
+
+- [ ] Preprocessing & Feature Engineering
 
 - [ ] Classification Modeling & Forecasting/Time-Aware Analysis
 
@@ -65,8 +70,6 @@ Final predictor variables to be determined
 - Accessability of the datasets needed to perform this research project as initially intended so the scope will need to be modified accordingly based on data availability.
 
 - Sharks are complex biological creatures so there are many variables that could influence their movement patterns, however, I need to be mindful of how much my system would be able to handle when it comes to processing and then using it to train models (i.e. not very feasible to have to wait for hours for training to be completed). Taking a sampling and/or reducing the dataset as needed should help with mitigating issues related to this.
-
-- Although I would like to have this project focus on Great White Sharks, it may expand to other sharks within the Lamnid Shark family like the shortfin makos, longfin makos, salmon sharks, and porbeagles, depending on what the final datasets end up containing for available shark tracking information.
 
 ### How will we know if the question is answered?
 
