@@ -37,19 +37,27 @@ I expect that integrating ocean condition data and weather conditions with Shark
 
 ### Datasources
 
-Final datasets to be determined
-
-### Response/Outcome Variable
-
-Shark presence as is detected by the receivers so taking into account both timing and location. I will be using this as a binary of Shark presence (1) or Shark absence (0) 
-
-### Predictor Variables
-
 - Dataset utilized from Regularized satellite tracks from: Ocean warming alters the distributional range, migratory timing, and spatial protections of an apex predator, the tiger shark (Galeocerdo cuvier) - https://pubmed.ncbi.nlm.nih.gov/35023247/
 
 - Buoy 41009 from National Buoy Data Center: historical standard meteorological data was pulled by year from 2010 to 2019 - https://noaa-mirror.org/www.ndbc.noaa.gov/station_page.php@station=41009
 
 - Buoy 41010 from National Buoy Data Center: historical standard meteorological data was pulled by year from 2010 to 2019 - https://www.ndbc.noaa.gov/adcp_data.php?station=41010
+
+### Response/Outcome Variable
+
+Shark presence as is detected by the receivers so taking into account both timing and location. I will be using this as a binary of Shark presence (1) or Shark absence (0) 
+
+### (Tentative) Predictor Variables
+
+➢	Ocean temperature
+➢	Air temperature (and maybe barometric pressure)
+➢	Wind - speed and direction
+➢	Wave height, direction, swell level
+➢	Tidecharts - high and low tide timing and water height difference between the two at the time
+➢	Seasons and times of day
+➢	Location
+➢	Storms or Hurricanes impacts
+
 
 ### Analysis Plan
 
