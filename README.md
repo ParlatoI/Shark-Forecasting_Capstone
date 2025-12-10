@@ -8,12 +8,12 @@ _________
 
 ### Background
 
-As surfers and other people interested in using the ocean for recreation, we always need to be mindful of safety levels from a variety of factors. Whereas factors like high swell and rip currents are monitored and even predicted days out, sharks are a very present factor that can impact safety but are still lacking in monitoring. There are existing apps that track tagged sharks but I have yet to see anything that seeks to further that knowledge in a more predicative way to use past history and common factors to forecast days where there is likely to be a higher chance of sharks near the beaches. 
+As surfers and other people interested in using the ocean for recreation, we always need to be mindful of safety levels from a variety of factors. Whereas factors like high swell and rip currents are monitored and even predicted days in advance, sharks are a very present factor that can impact safety but are still lacking in monitoring. There are existing apps that track tagged sharks but I have yet to see anything that seeks to further that knowledge in a more predictive way to use past history and common factors to forecast days where there is likely to be a higher chance of sharks near the beaches. 
 
 
 ### Research Question
 
-What factors determine Tiger Shark (Galeocerdo cuvier) movement and can we use them to predict likelihood of shark presence along the coastline? 
+This research project seeks to find what factors determine Tiger Shark (Galeocerdo cuvier) movement and can we use them to predict likelihood of shark presence along the coastline?
 
 ### Primary Stakeholders
 
@@ -41,7 +41,6 @@ I expect that integrating ocean condition data and weather conditions with Shark
 
 - Buoy 41009 from National Buoy Data Center: historical standard meteorological data was pulled by year from 2010 to 2019 - https://noaa-mirror.org/www.ndbc.noaa.gov/station_page.php@station=41009
 
-- Buoy 41010 from National Buoy Data Center: historical standard meteorological data was pulled by year from 2010 to 2019 - https://www.ndbc.noaa.gov/adcp_data.php?station=41010
 
 ### Response/Outcome Variable
 
@@ -49,14 +48,12 @@ Shark presence as is detected by the receivers so taking into account both timin
 
 ### (Tentative) Predictor Variables
 
-➢	Ocean temperature
-➢	Air temperature (and maybe barometric pressure)
-➢	Wind - speed and direction
-➢	Wave height, direction, swell level
-➢	Tidecharts - high and low tide timing and water height difference between the two at the time
-➢	Seasons and times of day
-➢	Location
-➢	Storms or Hurricanes impacts
+- Air temperature (Celsius)
+- Wind Speed (m/s)
+- Wind Direction
+- Sea level pressure (hPa)
+- date (month, day, year) and time
+- Location: longitude and latitude
 
 
 ### Analysis Plan
@@ -65,17 +62,15 @@ Shark presence as is detected by the receivers so taking into account both timin
 
 - [X] Exploratory Data Analysis (EDA)
 
-- [ ] Preprocessing & Feature Engineering
+- [X] Preprocessing & Feature Engineering
 
-- [ ] Classification Modeling & Forecasting/Time-Aware Analysis
+- [X] Classification Modeling using Unsupervised and Supervised Models
 
 - [ ] Model Evaluation
 
 - [ ] Final Review & Interpretations of Results
 
 ### Potential Pitfalls
-
-- Accessability of the datasets needed to perform this research project as initially intended so the scope will need to be modified accordingly based on data availability.
 
 - Sharks are complex biological creatures so there are many variables that could influence their movement patterns, however, I need to be mindful of how much my system would be able to handle when it comes to processing and then using it to train models (i.e. not very feasible to have to wait for hours for training to be completed). Taking a sampling and/or reducing the dataset as needed should help with mitigating issues related to this.
 
@@ -93,5 +88,5 @@ If the model is able to accurately predict “future” shark movement accuratel
 
 - Python
 - R
-- Tableau 
+
 
