@@ -6,14 +6,14 @@ _________
 
 ## Project Overview
 
-### Background
+### Synopsis
 
-As surfers and other people interested in using the ocean for recreation, we always need to be mindful of safety levels from a variety of factors. Whereas factors like high swell and rip currents are monitored and even predicted days in advance, sharks are a very present factor that can impact safety but are still lacking in monitoring. There are existing apps that track tagged sharks but I have yet to see anything that seeks to further that knowledge in a more predictive way to use past history and common factors to forecast days where there is likely to be a higher chance of sharks near the beaches. 
+Shark presence is an important but difficult-to-predict factor affecting ocean recreation safety. This project examines whether tiger shark (Galeocerdo cuvier) presence near the eastern coast of Cape Canaveral, Florida, can be predicted using a combination of environmental, spatial, and temporal conditions. By integrating logged shark detections with offshore buoy historical meteorological data spanning from 2010-2019, several supervised and unsupervised models were evaluated to understand when certain factors align with elevated shark presence risk. The results show that spatial location is a dominant predictor, while environmental and temporal variables contribute more limited predictive power on their own. These findings suggest that while predictive tools can help with identifying patterns of elevated shark presence risk, future improvements will require denser shark tracking data and more ecologically informative predictors before such models can be deployed in more interactive ways for casual public use as directionally informative tools to better understand risk indications for shark presence.
 
 
 ### Research Question
 
-This research project seeks to find what factors determine Tiger Shark (Galeocerdo cuvier) movement and can we use them to predict likelihood of shark presence along the coastline?
+Can we predict the likelihood of tiger shark (Galeocerdo cuvier) presence along the western North Atlantic coastline near the East of Cape Canaveral, Florida, using spatial, temporal, and environmental conditions, in order to inform ocean recreation risk?
 
 ### Primary Stakeholders
 
@@ -27,11 +27,11 @@ This research project seeks to find what factors determine Tiger Shark (Galeocer
 
 ### Hypothesis
 
-Shark movement along the coastline is strongly influenced by a combination of climate, life cycle, and ocean factors, particularly water temperature, age and type of shark, and time of year, because these factors determine sharks’ abilities to survive colder northern coastal waters and biological inclinations like going to common nesting areas for mating.
+While tiger shark movement is influenced by biological factors such as life stage, and prey availability, we hypothesize that environmental and temporal conditions - particularly temperature, sea level pressure, wind conditions, and seasonality - are associated with elevated likelihood of coastal presence and can be anticipated using a predictive risk model.
 
 ### Prediction
 
-I expect that integrating ocean condition data and weather conditions with Shark tracking data will allow for a model that is capable of predicting the likelihood of shark presence. I believe that we’ll likely see trends of more sharks further up the coastline at beaches when ocean temperatures are warmer, and generally calmer (so not during hurricane impacted times), and depending upon seasonal migration times.
+We expect that integrating shark movement data with environmental and temporal conditions will produce a model capable of identifying periods of heightened shark presence risk, particularly during warmer temperatures, calmer weather conditions, and known seasonal migration windows.
 
 ## Data & Analysis
 
@@ -46,14 +46,16 @@ I expect that integrating ocean condition data and weather conditions with Shark
 
 Shark presence as is detected by the receivers so taking into account both timing and location. I will be using this as a binary of Shark presence (1) or Shark absence (0) 
 
-### (Tentative) Predictor Variables
+### Predictor Variables
 
 - Air temperature (Celsius)
 - Wind Speed (m/s)
 - Wind Direction
 - Sea level pressure (hPa)
-- date (month, day, year) and time
+- date (month, day, year)
+- timestamp, hour, and minute
 - Location: longitude and latitude
+- datetime
 
 
 ### Analysis Plan
@@ -66,13 +68,10 @@ Shark presence as is detected by the receivers so taking into account both timin
 
 - [X] Classification Modeling using Unsupervised and Supervised Models
 
-- [ ] Model Evaluation
+- [X] Model Evaluation
 
-- [ ] Final Review & Interpretations of Results
+- [X] Final Review & Interpretations of Results
 
-### Potential Pitfalls
-
-- Sharks are complex biological creatures so there are many variables that could influence their movement patterns, however, I need to be mindful of how much my system would be able to handle when it comes to processing and then using it to train models (i.e. not very feasible to have to wait for hours for training to be completed). Taking a sampling and/or reducing the dataset as needed should help with mitigating issues related to this.
 
 ### How will we know if the question is answered?
 
@@ -84,9 +83,23 @@ If the model is able to accurately predict “future” shark movement accuratel
 
 ## Technical Details
 
-### Coding Languages & Tools
+### Unsupervised Models
+
+- K-Means Clustering
+- Sampled Hierarchical Clustering
+- Principal Component Analysis (PCA)
+- Gaussian Mixture Model (GMM)
+
+### Supervised Models
+
+- Baseline Logistic Regression - using default L2 regularization (no tuning)
+- Penalized Logistric Regression (L1, L2, ElasticNet)
+- Gradient Boosting Classifer
+- Random Forest Classifier
+
+### Coding Language
 
 - Python
-- R
+
 
 
