@@ -73,14 +73,6 @@ Shark presence as is detected by the receivers so taking into account both timin
 - [X] Final Review & Interpretations of Results
 
 
-### How will we know if the question is answered?
-
-There will be clear patterns between the environmental variables being used and shark movement. Thus, the final model is able to demonstrate predictive accuracy in shark presence patterns.
-
-### How will we know if the hypothesis is supported?
-
-If the model is able to accurately predict “future” shark movement accurately then we’ll know that there is enough variance in model parameters (i.e. the combination of features and model choice) to support my hypothesis that they’re factors in shark movement along the coastline.
-
 ## Technical Details
 
 ### Unsupervised Models
